@@ -220,7 +220,7 @@ zValue -= zZero;
     Serial.println(btn3);
   }
 
-  joySt.buttons = btn1 | (btn2<<1) | (btn3 <<2) | (throttleButtonState<<3);
+  joySt.buttons = btn1 | (btn2<<1) | (btn3 <<2);
 
   // If the throttle is currently unlocked and the toggle has been activated, lock the throttle
   if (throttleButtonState == 1 and throttleState == 0) {
