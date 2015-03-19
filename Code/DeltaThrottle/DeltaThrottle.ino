@@ -1,7 +1,10 @@
 
 JoyState_t joySt;
 
-const bool DEBUG = false;  // set to true to debug the raw values
+const bool DEBUG = true;  // set to true to debug the raw values
+const int throttleOffButton = 2;
+int throttleState = 0;
+int throttleButtonState = 0;
 
 float xZero, yZero, zZero;
 float xValue, yValue, zValue;
@@ -9,12 +12,12 @@ float xValue, yValue, zValue;
 //Geometry
 float handle_rad = 1.75;     // end effector
 float base_rad = 1.75;     // base
-float pushrod_lng = 3.5;
-float pivot_lng = 2.25;
+float pushrod_lng = 3.25;
+float pivot_lng = 2.2;
 
 //Configuration
 float deadzone = 0.1;  // smaller values will be set to 0
-int gain = 150;
+int gain = 155;
 
  
  // trigonometric constants
@@ -33,9 +36,11 @@ void setup(){
  	pinMode(A0, INPUT);
  	pinMode(A1, INPUT);
         pinMode(A2, INPUT);
+        pinMode(throttleOffButton, INPUT);
         pinMode(2,  INPUT);
         pinMode(3,  INPUT);
         pinMode(4,  INPUT);
+        digitalWrite(throttleOffButton,HIGH);
         digitalWrite(2,HIGH);
         digitalWrite(3,HIGH);
         digitalWrite(4,HIGH);
@@ -132,6 +137,7 @@ void loop(){
 
   getForwardKinematic();
   
+  int throttleButtonState = !digitalRead(throttleOffButton);
   int btn1 = !digitalRead(2);
   int btn2 = !digitalRead(3);
   int btn3 = !digitalRead(4);
@@ -199,22 +205,38 @@ zValue -= zZero;
   joySt.yAxis = map(yVal, -100, 100, 0, 255);
   joySt.zAxis = map(zVal, -100, 100, 0, 255);
   
-  joySt.buttons = btn1 | (btn2<<1) | (btn3 <<2);
-
   if(DEBUG) {
-	Serial.print("X: ");
-	Serial.println(xVal);
-	Serial.print("Y: ");
-	Serial.println(yVal);
-	Serial.print("Z: ");
-	Serial.println(zVal);
-      Serial.print("B1: ");
-      Serial.println(btn1);
-      Serial.print("B2: ");
-      Serial.println(btn2);
-      Serial.print("B3: ");
-      Serial.println(btn3);
+    Serial.print("X: ");
+    Serial.println(xVal);
+    Serial.print("Y: ");
+    Serial.println(yVal);
+    Serial.print("Z: ");
+    Serial.println(zVal);
+    Serial.print("B1: ");
+    Serial.println(btn1);
+    Serial.print("B2: ");
+    Serial.println(btn2);
+    Serial.print("B3: ");
+    Serial.println(btn3);
   }
+
+  joySt.buttons = btn1 | (btn2<<1) | (btn3 <<2) | (throttleButtonState<<3);
+
+  // If the throttle is currently unlocked and the toggle has been activated, lock the throttle
+  if (throttleButtonState == 1 and throttleState == 0) {
+    throttleState = 1;
+  }
+  // If the throttle locked and the toggle is activated, unlock the throttle
+  else if (throttleButtonState == 1 and throttleState == 1) {
+    throttleState = 0;
+  }
+
+  // If the throttle is locked set all axis to 0
+  if (throttleState == 1) {
+    joySt.xAxis = map(0, -100, 100, 0, 255);
+    joySt.yAxis = map(0, -100, 100, 0, 255);
+    joySt.zAxis = map(0, -100, 100, 0, 255);
+  }    
 
   // Send to USB
   Joystick.setState(&joySt);
