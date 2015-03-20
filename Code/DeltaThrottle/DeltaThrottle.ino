@@ -1,9 +1,9 @@
 
 JoyState_t joySt;
 
-const bool DEBUG = true;  // set to true to debug the raw values
-const int throttleOffButton = 2;
-int throttleState = 0;
+const bool DEBUG = false;  // set to true to debug the raw values
+const int throttleOffButton = 3; // set to the pin number to use for throttle toggle
+int throttleState = 0; // Used to track the state of throttle lockout 0=unlocked 1=locked
 int throttleButtonState = 0;
 
 float xZero, yZero, zZero;
@@ -231,10 +231,9 @@ zValue -= zZero;
     throttleState = 0;
   }
 
-  // If the throttle is locked set all axis to 0
+  // If the throttle is locked set X and Z to 0, but allow normal throttle control on Y
   if (throttleState == 1) {
     joySt.xAxis = map(0, -100, 100, 0, 255);
-    joySt.yAxis = map(0, -100, 100, 0, 255);
     joySt.zAxis = map(0, -100, 100, 0, 255);
   }    
 
