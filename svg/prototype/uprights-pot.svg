@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128.08684"
+   height="103.54933"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="uprights-pot.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5"
+     inkscape:cx="80.326829"
+     inkscape:cy="-3.2489254"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g4305"
+     showgrid="true"
+     units="mm"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1440"
+     inkscape:window-height="794"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     showborder="false"
+     inkscape:showpageshadow="false"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-nodes="true"
+     inkscape:snap-grids="true"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-global="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     borderlayer="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid5451"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       units="mm"
+       dotted="false"
+       originx="0.26656533px"
+       originy="7.2583486px" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="126.26657,6.2583486"
+       id="guide5963" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="98.266565,31.258349"
+       id="guide5967" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="137.26657,7.2583486"
+       id="guide5969" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="81.266565,56.022796"
+       id="guide5973" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.26656533,-956.07116)">
+    <g
+       id="g5446"
+       transform="matrix(0.99886763,0,0,1,-675.1999,342.17688)">
+      <g
+         transform="translate(-44.542795,-123.65502)"
+         id="g4305">
+        <path
+           id="path5971"
+           transform="matrix(1.9995992,0,0,1.9973349,683.62361,-1265.0286)"
+           style="fill:none;stroke:#000000;stroke-width:0.26610261;stroke-miterlimit:4"
+           d="m 63,1045.9921 c 0,2.2091 -1.790861,4 -4,4 -2.209139,0 -4,-1.7909 -4,-4 0,-2.2092 1.790861,-4 4,-4 2.209139,0 4,1.7908 4,4 z m 9.518013,-43.2214 c 6.508674,0 10.999179,1.5795 9.512676,9.012 -1.486498,7.4325 -2.002666,21.5287 -0.500665,39.052 l 0,3.5047 -63.084062,0 0,-3.5047 c 6.723977,-32.516 25.256396,-48.064 54.072051,-48.064 z m -5.046965,23.5007 c 0,4.5913 -3.721968,8.3132 -8.313249,8.3132 -4.591282,0 -8.31325,-3.7219 -8.31325,-8.3132 0,-4.5913 3.721968,-8.3133 8.31325,-8.3133 4.591281,0 8.313249,3.722 8.313249,8.3133 z"
+           inkscape:connector-curvature="0" />
+      </g>
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.03950756;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect5453"
+         width="5.0056434"
+         height="7.0000124"
+         x="660.94836"
+         y="708.18524" />
+    </g>
+  </g>
+</svg>
