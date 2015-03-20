@@ -13,8 +13,8 @@ float xValue, yValue, zValue;
 // Lengths for push rods and pivot arms should be measured from rotation center to rotation center
 float handle_rad = 1.75;   // End effector
 float base_rad = 1.75;     // Base
-float pushrod_lng = 3.25;  // Change this if you used shorter or longer push rods (hex standoffs for 3d print)
-float pivot_lng = 2.2;     // Change this if you modified the pivot arm length.
+float pushrod_lng = 3.5;  // Change this if you used shorter or longer push rods (hex standoffs for 3d print)
+float pivot_lng = 2.25;     // Change this if you modified the pivot arm length.
 
 // Configuration
 float deadzone = 0.1;  // Smaller values will be set to 0
