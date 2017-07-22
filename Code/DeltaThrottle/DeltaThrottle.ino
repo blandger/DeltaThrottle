@@ -18,7 +18,7 @@ float pivot_lng = 2.25;     // Change this if you modified the pivot arm length.
 
 // Configuration
 float deadzone = 0.1;  // Smaller values will be set to 0
-int gain = 155;
+int gain = 150; // 155
  
 // Trigonometric constants
 float sqrt3 = sqrt(3.0);
